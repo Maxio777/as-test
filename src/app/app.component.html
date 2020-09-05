@@ -3,7 +3,7 @@
     <li *ngFor="let city of cities">
       <div class="city">
         <span class="name" appWeatherDetail (showCurrentCity)="setCurrentCity(city)">{{city.name}}</span>
-        <app-weather-info *ngIf="isShow(city)" [currentCity]="currentCity" (closeModal)="closeModal()"></app-weather-info>
+        <app-weather-info *ngIf="isShow(city)" [currentCity]="currentCity" (closeModal)="setCurrentCity(null)"></app-weather-info>
       </div>
     </li>
   </ul>

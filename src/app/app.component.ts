@@ -1,6 +1,7 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {City} from "./interfaces/city";
 import {CITIES} from "./mock/mock";
+
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,7 @@ import {CITIES} from "./mock/mock";
 export class AppComponent implements OnInit {
   title = 'AS';
   cities: City[] = [];
-  currentCity: City = null;
-
-  constructor(private cd: ChangeDetectorRef) {
-  }
+  currentCity: City | null = null;
 
   ngOnInit(): void {
     this.cities = CITIES;
@@ -24,14 +22,7 @@ export class AppComponent implements OnInit {
     return this.currentCity && this.currentCity.id === city.id;
   }
 
-  closeModal() {
-    console.log('close');
-    this.setCurrentCity(null);
-    this.cd.detectChanges();
-  }
-
   setCurrentCity(city: City | null) {
     this.currentCity = city;
-    this.cd.detectChanges();
   }
 }

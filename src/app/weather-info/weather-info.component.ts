@@ -1,6 +1,7 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
 import {City} from "../interfaces/city";
 
+
 @Component({
   selector: 'app-weather-info',
   templateUrl: './weather-info.component.html',
