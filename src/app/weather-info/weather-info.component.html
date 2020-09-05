@@ -1,0 +1,18 @@
+<div class="main">
+  <mat-card>
+
+    <button mat-icon-button (click)="close()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <div class="info">
+      <img src="../../assets/icons/{{currentCity?.img}}" alt="">
+      <div class="detail">
+        <div class="time">{{currentCity?.time | date: ' HH:mm'}}</div>
+        <div class="temp">{{currentCity?.temp}}</div>
+        <div class="description">{{currentCity?.description}}</div>
+      </div>
+    </div>
+
+  </mat-card>
+</div>
+

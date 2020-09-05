@@ -1,0 +1,35 @@
+.main {
+  position: absolute;
+  width: 400px;
+  top: 0;
+  right: -420px;
+  z-index: 2;
+
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      width: 50%;
+      height: auto;
+    }
+
+    .detail {
+      display: flex;
+      flex-direction: column;
+      padding-left: 16px;
+      width: 50%;
+      font-size: 24px;
+      line-height: 40px;
+    }
+  }
+}
+
+
+

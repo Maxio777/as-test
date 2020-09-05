@@ -1,0 +1,27 @@
+
+
+.info {
+  position: absolute;
+  top: 0;
+  right: -100px;
+}
+
+.container {
+  ul {
+    width: max-content;
+  }
+  width: 80%;
+  padding-top: 50px;
+  margin: auto;
+  .city {
+    position: relative;
+    .name {
+      font-size: 28px;
+      line-height: 36px;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 1px dashed;
+      }
+    }
+  }
+}
